@@ -3,24 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy — функциональное питание для котов</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1 class="visually-hidden">Cat Energy — функциональное питание для котов</h1>
     <header class="header">
       <a class="header__logo logo" href="#">Cat Energy</a>
-      <nav class="header__navigation main-navigation">
-        <label class="main-navigation__toggle button">
-          <input type="checkbox">
-          Открыть меню
-        </label>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
+      <nav class="header__navigation navigation">
+        <input type="checkbox" name="navigation-toggle">
+        <label class="navigation__toggle button" for="navigation-toggle">Открыть меню</label>
+        <ul class="navigation__list">
+          <li class="navigation__item">
             <a>Главная</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="navigation__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="navigation__item">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -33,6 +31,7 @@
       </section>
     </header>
     <main class="main">
+      <h1 class="visually-hidden">Cat Energy — функциональное питание для котов</h1>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог продукции</h2>
         <article class="catalog__item">
@@ -67,9 +66,8 @@
           <dd class="example__results-value">60 дней</dd>
         </dl>
         <b class="example__expenses">Затраты на питание: 15 000 руб.</b>
-        <label class="example__toggle">
-          <input type="checkbox">
-        </label>
+        <input type="checkbox" name="example-toggle">
+        <label class="example__toggle" for="example-toggle"></label>
         <img class="example__cat example__cat--fat" width="320" height="240" src="" alt="Борис до перехода на корм Cat Energy Slim">
         <img class="example__cat example__cat--slim" width="320" height="240" src="" alt="Постройневший Борис через два месяца после замены корма на Cat Energy Slim">
       </section>
@@ -84,7 +82,7 @@
     </main>
     <footer class="footer">
       <a class="footer__logo logo logo--single">Cat Energy</a>
-      <section class="footer__socials">
+      <section class="footer__socials social">
         <a class="social__link social__link--vkontakte" href="#">Cat Energy во ВКонтакте</a>
         <a class="social__link social__link--instagram" href="#">Cat Energy в Инстаграме</a>
         <a class="social__link social__link--facebook" href="#">Cat Energy в Фейсбуке</a>

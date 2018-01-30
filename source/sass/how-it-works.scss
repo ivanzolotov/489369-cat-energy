@@ -29,7 +29,7 @@
 .how-it-works__item::before {
   content: "";
   position: absolute;
-  background-color: #68b738;
+  background-color: $colorGreen;
   background-position: 50%;
   width: 60px;
   height: 60px;

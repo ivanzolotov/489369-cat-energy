@@ -1,0 +1,41 @@
+.navigation {
+  background-color: #ffffff;
+}
+
+.navigation__toggle + input[type="checkbox"] {
+  display: none;
+}
+
+.navigation__toggle + input[type="checkbox"]:checked ~ .navigation__list {
+  display: none;
+}
+
+.navigation__toggle {
+  @include text-invisible;
+  background-color: #ffffff;
+  background-image: url("/img/icon-mobile-menu.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-size: 24px 18px;
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  // min-height: 60px;
+  // margin-bottom: 20px;
+  // padding-left: 80px;
+  // position: relative;
+}

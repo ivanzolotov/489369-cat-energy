@@ -1,0 +1,13 @@
+.location {
+  background-color: #fdf7ef;
+}
+
+.location__map {
+  @include text-invisible;
+  width: 320px;
+  height: 360px;
+  background-image: url("/img/map-pin.png"), url("/img/map.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50%, 50%;
+  background-size: 62px 53px, 100%;
+}

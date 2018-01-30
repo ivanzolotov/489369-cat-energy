@@ -1,0 +1,25 @@
+.catalog {
+  background: #ffffff;
+}
+
+.catalog__item {
+  background-color: #f2f2f2;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.catalog__item:first-of-type {
+  margin-top: 0;
+}
+
+.catalog__title {
+  @include text-type-five;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__description {
+  @include text-type-four;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+.example {
+  background-color: #f2f2f2;
+  padding: 0 20px;
+}
+
+.example__title {
+  @include text-type-three;
+  margin: 0;
+  padding: 34px 0 0;
+}
+
+.example__description {
+  @include text-type-four;
+}

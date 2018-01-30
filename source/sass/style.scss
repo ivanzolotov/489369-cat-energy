@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_mixins";
-
+@import "html";
+@import "body";
 @import "button";
 @import "catalog";
 @import "example";
@@ -13,6 +14,7 @@
 @import "location";
 @import "logo";
 @import "main";
+@import "main-catalog";
 @import "navigation";
 @import "social";
 @import "visually-hidden";

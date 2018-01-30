@@ -1,0 +1,36 @@
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__logo {
+  @include text-invisible;
+  display: block;
+  margin: 0 20px;
+  height: 94px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__socials {
+  @include text-invisible;
+  margin: 0 20px;
+  height: 62px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__copyright {
+  height: 78px;
+  display: block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.footer__copyright::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("/img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 40px;
+  right: 0;
+}

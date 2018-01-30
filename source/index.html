@@ -7,10 +7,10 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo logo" href="#">Cat Energy</a>
+      <a class="header__logo logo logo--header" href="#"></a>
       <nav class="header__navigation navigation">
-        <input type="checkbox" name="navigation-toggle">
         <label class="navigation__toggle button" for="navigation-toggle">Открыть меню</label>
+        <input type="checkbox" id="navigation-toggle" checked>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a>Главная</a>
@@ -41,7 +41,7 @@
           <a class="catalog__link" href="catalog.html#slim">Каталог Slim</a>
         </article>
         <article class="catalog__item">
-          <h3 class="catalog__title catalog__title--pro">Похудение</h3>
+          <h3 class="catalog__title catalog__title--pro">Набор массы</h3>
           <p class="catalog__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="catalog__link" href="catalog.html#pro">Каталог Pro</a>
         </article>
@@ -68,8 +68,8 @@
         <b class="example__expenses">Затраты на питание: 15 000 руб.</b>
         <input type="checkbox" name="example-toggle">
         <label class="example__toggle" for="example-toggle"></label>
-        <img class="example__cat example__cat--fat" width="320" height="240" src="" alt="Борис до перехода на корм Cat Energy Slim">
-        <img class="example__cat example__cat--slim" width="320" height="240" src="" alt="Постройневший Борис через два месяца после замены корма на Cat Energy Slim">
+        <img class="example__cat example__cat--fat" width="320" height="240" src="/img/before-mobile@1x.png" alt="Борис до перехода на корм Cat Energy Slim">
+        <img class="example__cat example__cat--slim" width="320" height="240" src="/img/after-mobile@1x.png" alt="Постройневший Борис через два месяца после замены корма на Cat Energy Slim">
       </section>
       <section class="invatation">
         <h2 class="invatation__title">Приглашаем к сотрудничеству дилеров!</h2>
@@ -77,11 +77,11 @@
       </section>
       <section class="location">
         <h2 class="visually-hidden">Карта</h2>
-        <img class="location__map" width="320" height="240" src="" alt="Cat Energy на карте Санкт-Петербурга">
+        <div class="location__map">Cat Energy на карте Санкт-Петербурга</div>
       </section>
     </main>
     <footer class="footer">
-      <a class="footer__logo logo logo--single">Cat Energy</a>
+      <a class="footer__logo logo logo--footer" href="/">Cat Energy</a>
       <section class="footer__socials social">
         <a class="social__link social__link--vkontakte" href="#">Cat Energy во ВКонтакте</a>
         <a class="social__link social__link--instagram" href="#">Cat Energy в Инстаграме</a>

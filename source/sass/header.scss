@@ -1,10 +1,14 @@
 .header {
-  background-color: #ffffff;
   position: relative;
+
+  height: 570px;
+
+  background-color: #ffffff;
 }
 
 .header__logo {
   display: block;
   height: 65px;
+
   border-bottom: 1px solid #e6e6e6;
 }

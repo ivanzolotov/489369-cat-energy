@@ -1,7 +1,7 @@
 .logo {
-  background-image: url("/img/logo-mobile-header.svg");
+  background-image: url("/img/logo-mobile-header.svg"), url("/img/icon-logo-mobile.svg");
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 50% 50%, 20px 50%;
 }
 
 .logo--footer {
@@ -9,10 +9,5 @@
 }
 
 .logo--header {
-  background-size: 101px 18px;
+  background-size: 101px 18px, 33px 38px;
 }
-
-// .logo::before {
-//   background-color: #ffffff;
-//   background-image: url("/img/icon-logo-mobile.svg");
-// }

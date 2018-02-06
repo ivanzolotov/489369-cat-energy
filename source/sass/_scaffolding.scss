@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Oswald Regular";
+  src: url("/fonts/oswaldregular.woff2") format("woff2"), url("/fonts/oswaldregular.woff") format("woff");
+}
+
 body {
   margin: 0;
   background-color: #ffffff;

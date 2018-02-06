@@ -28,9 +28,7 @@
 }
 
 .navigation__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include normalize-ul;
 }
 
 .navigation__item {

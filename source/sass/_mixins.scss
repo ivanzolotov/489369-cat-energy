@@ -44,3 +44,9 @@
   font-weight: 400;
   color: #111111;
 }
+
+@mixin normalize-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

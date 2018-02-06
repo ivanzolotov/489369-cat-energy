@@ -2,11 +2,11 @@
   background-color: #ffffff;
 }
 
-.navigation__toggle + input[type="checkbox"] {
+.navigation__real-toggle {
   display: none;
 }
 
-.navigation__toggle + input[type="checkbox"]:checked ~ .navigation__list {
+.navigation__real-toggle:checked ~ .navigation__list {
   display: none;
 }
 

@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy — подбор программы</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
-    <a class="header__logo logo" href="#">Cat Energy</a>
-    <nav class="header__navigation main-navigation">
-      <label class="main-navigation__toggle button">
-        <input type="checkbox"> Открыть меню
-      </label>
-      <ul class="main-navigation__list">
-        <li class="main-navigation__item">
-          <a>Главная</a>
+    <a class="header__logo logo logo--header" href="#"></a>
+    <nav class="header__navigation navigation">
+      <label class="navigation__toggle button" for="navigation-toggle">Открыть меню</label>
+      <input class="navigation__real-toggle" type="checkbox" id="navigation-toggle" checked>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="index.html">Главная</a>
         </li>
-        <li class="main-navigation__item">
-          <a href="catalog.html">Каталог продукции</a>
+        <li class="navigation__item">
+          <a>Каталог продукции</a>
         </li>
-        <li class="main-navigation__item">
+        <li class="navigation__item">
           <a href="form.html">Подбор программы</a>
         </li>
       </ul>
@@ -97,17 +97,17 @@
     </section>
     <section class="location">
       <h2 class="visually-hidden">Карта</h2>
-      <img class="location__map" width="320" height="240" src="" alt="Cat Energy на карте Санкт-Петербурга">
+      <div class="location__map">Cat Energy на карте Санкт-Петербурга</div>
     </section>
-  </main>
-  <footer class="footer">
-    <a class="footer__logo logo logo--single">Cat Energy</a>
-    <section class="footer__socials">
-      <a class="social__link social__link--vkontakte" href="#">Cat Energy во ВКонтакте</a>
-      <a class="social__link social__link--instagram" href="#">Cat Energy в Инстаграме</a>
-      <a class="social__link social__link--facebook" href="#">Cat Energy в Фейсбуке</a>
-    </section>
-    <a class="footer__copyright" href="https://htmlacademy.ru">HTML Academy</a>
-  </footer>
+    </main>
+    <footer class="footer">
+      <a class="footer__logo logo logo--footer" href="/">Cat Energy</a>
+      <section class="footer__socials social">
+        <a class="social__link social__link--vkontakte" href="#">Cat Energy во ВКонтакте</a>
+        <a class="social__link social__link--instagram" href="#">Cat Energy в Инстаграме</a>
+        <a class="social__link social__link--facebook" href="#">Cat Energy в Фейсбуке</a>
+      </section>
+      <a class="footer__copyright" href="https://htmlacademy.ru">HTML Academy</a>
+    </footer>
 </body>
 </html>

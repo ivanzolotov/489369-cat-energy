@@ -1,0 +1,41 @@
+.navigation__real-toggle {
+  display: none;
+}
+
+.navigation__real-toggle:checked ~ .navigation__list {
+  display: none;
+}
+
+.navigation__toggle {
+  @include text-invisible;
+  background-color: #ffffff;
+  background-image: url("/img/icon-mobile-menu.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-size: 24px 18px;
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list {
+  @include normalize-ul;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__item {
+  height: 60px;
+  font-family: "Oswald Medium", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+}

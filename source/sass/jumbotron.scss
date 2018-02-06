@@ -1,0 +1,35 @@
+.jumbotron {
+  background-color: #ffffff;
+  background-image: url("/img/index-can-mobile@1x.png"), url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 167px, 0 0;
+  padding: 32px 20px 0;
+}
+
+.jumbotron__title {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron__subtitle {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 300px 0;
+  padding: 20px 0 0;
+}
+
+.jumbotron__button {
+  margin: 0 auto 22px auto;
+  display: block;
+}

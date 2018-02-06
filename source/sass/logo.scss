@@ -1,0 +1,13 @@
+.logo {
+  background-image: url("/img/logo-mobile-header.svg"), url("/img/icon-logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%, 20px 50%;
+}
+
+.logo--footer {
+  background-size: 128px 24px;
+}
+
+.logo--header {
+  background-size: 101px 18px, 33px 38px;
+}

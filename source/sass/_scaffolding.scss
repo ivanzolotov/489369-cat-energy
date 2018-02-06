@@ -3,6 +3,10 @@
   src: url("/fonts/oswaldregular.woff2") format("woff2"), url("/fonts/oswaldregular.woff") format("woff");
 }
 
+html {
+  line-height: 1.15;
+}
+
 body {
   margin: 0;
   background-color: #ffffff;

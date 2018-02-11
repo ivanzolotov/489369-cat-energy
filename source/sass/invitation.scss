@@ -1,4 +1,4 @@
-.invatation {
+.invitation {
   background-color: #ffffff;
   display: flex;
   margin: 0 20px;
@@ -6,12 +6,12 @@
   align-items: center;
 }
 
-.invatation__title {
+.invitation__title {
   @include text-type-one;
   flex-basis: 50%;
 }
 
-.invatation__address {
+.invitation__address {
   @include text-type-two;
   flex-basis: 50%;
 }

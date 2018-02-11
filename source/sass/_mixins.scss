@@ -65,11 +65,10 @@
 
 @mixin root-block-layout {
   display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 320px;
-  max-width: 1300px;
-  margin: 0 auto;
+
+  width: calc(100% - 20px * 2);
+  min-width: calc(320px - 20px * 2);
+  max-width: calc(1300px - 40px * 2);
   padding-right: 20px;
   padding-left: 20px;
 
@@ -79,8 +78,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: calc((100% - (1300px - 40px * 2)) / 2);
+    padding-left: calc((100% - (1300px - 40px * 2)) / 2);
   }
 }
 

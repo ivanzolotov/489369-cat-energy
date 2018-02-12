@@ -1,11 +1,17 @@
 .logo {
+  @include text-invisible;
   background-image: url("/img/logo-mobile-header.svg"), url("/img/icon-logo-mobile.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%, 20px 50%;
 }
 
 .logo--footer {
+  background-image: url("/img/logo-mobile-header.svg");
   background-size: 128px 24px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 0 50%;
+  }
 }
 
 .logo--header {

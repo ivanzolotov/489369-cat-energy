@@ -1,7 +1,7 @@
 .button {
   font-family: "Oswald Regular", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   text-transform: uppercase;
   font-weight: 400;
   background: $colorGreen;
@@ -9,4 +9,8 @@
   text-align: center;
   padding: 11px 0;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }

@@ -4,38 +4,62 @@
 
 .navigation__real-toggle:checked ~ .navigation__list {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .navigation__toggle {
   @include text-invisible;
-  background-color: #ffffff;
-  background-image: url("/img/icon-mobile-menu.svg");
-  background-position: 50%;
-  background-repeat: no-repeat;
+
+  position: absolute;
   top: 0;
   right: 0;
-  position: absolute;
-  background-size: 24px 18px;
+
+  display: block;
   width: 65px;
   height: 65px;
-  display: block;
   margin: 0;
   padding: 0;
+
+  background-color: #ffffff;
+  background-image: url("/img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 24px 18px;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__list {
   @include normalize-ul;
+
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .navigation__item {
   height: 60px;
-  font-family: "Oswald Medium", "Arial", sans-serif;
+
   font-size: 20px;
   line-height: 20px;
+  font-family: "Oswald Medium", "Arial", sans-serif;
   font-weight: 400;
-  color: #111111;
   text-transform: uppercase;
+  color: #111111;
+
   border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 0;
+  }
 }

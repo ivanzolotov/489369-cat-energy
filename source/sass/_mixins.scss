@@ -37,7 +37,7 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -78,13 +78,13 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     padding-right: 30px;
     padding-left: 30px;
     width: calc(100% - 30px * 2);
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     padding-right: calc((100% - (1300px - 40px * 2)) / 2);
     padding-left: calc((100% - (1300px - 40px * 2)) / 2);
     width: calc(100% - 40px * 2);
@@ -99,7 +99,7 @@
   font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     font-size: 60px;
   }
 }
@@ -112,7 +112,7 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     font-size: 16px;
     line-height: 24px;
   }

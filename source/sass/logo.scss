@@ -10,7 +10,7 @@
 }
 
 
-@media (min-width: $tablet-width) {
+@media ($tablet) {
   .logo--header {
     background-position: 90px 50%, 0 50%;
     background-size: 85px 18px, 70px 58px;
@@ -18,7 +18,7 @@
 }
 
 
-@media (min-width: $desktop-width) {
+@media ($desktop) {
   .logo--header {
     background-position: 85px 50%, 0 50%;
     background-size: 120px 23px, 70px 58px;
@@ -31,7 +31,7 @@
   background-image: url("/img/logo-mobile-header.svg");
   background-size: 128px 24px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     background-position: 0 50%;
   }
 }

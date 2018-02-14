@@ -6,13 +6,13 @@
 
   background-color: #f2f2f2;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     background-image: linear-gradient(#ffffff 620px, #f2f2f2 620px);
     border-top: 1px solid #e5e5e5;
     padding-bottom: 67px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     flex-wrap: wrap;
     max-height: 700px;
     border-top: 0;
@@ -28,12 +28,12 @@
   margin-top: 31px;
   margin-bottom: 38px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     margin-top: 46px;
     margin-bottom: 71px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     margin-top: 73px;
     margin-bottom: 72px;
     width: calc(1300px / 2 - 2 * 40px);
@@ -47,11 +47,11 @@
   margin-top: 0;
   margin-bottom: 25px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     margin-bottom: 55px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     width: calc(1300px / 2 - 2 * 40px);
     margin-bottom: 70px;
   }
@@ -62,7 +62,7 @@
   @include outline;
   @include normalize-dl;
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     height: 227px;
     width: calc(1300px / 2 - 2 * 40px);
   }
@@ -72,7 +72,7 @@
 .example__slider {
   @include outline;
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     width: calc(1300px / 2 - 2 * 40px);
   }
 }

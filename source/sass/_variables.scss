@@ -1,7 +1,7 @@
 $colorGreen: #68b738;
 
-$tablet-width: 766px;
-$desktop-width: 1300px;
+$tablet: "min-width: 766px";
+$desktop: "min-width: 1300px";
 
 // TODO: Вычистить всюду эти переменные, идея как-то не взлетела
 $mobile-offset: 20px;

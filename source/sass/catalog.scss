@@ -10,11 +10,11 @@
 
   background: #ffffff;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     padding: 0 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     flex-direction: row;
     padding: 0;
   }
@@ -30,12 +30,12 @@
 
   background-color: #f2f2f2;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     margin-top: 30px;
     padding: 0 285px 63px 53px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     width: 50%;
     margin: 0 40px;
     padding: 0 53px 63px 53px;
@@ -59,7 +59,7 @@
 
   content: "";
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     top: 92px;
     right: 62px;
     left: auto;
@@ -68,7 +68,7 @@
     height: 200px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     top: 47px;
     right: auto;
     left: 52px;
@@ -91,7 +91,7 @@
 
   content: "";
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     top: 52px;
     right: 22px;
     left: auto;
@@ -100,7 +100,7 @@
     height: 280px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     top: 27px;
     right: auto;
     left: 32px;
@@ -114,11 +114,11 @@
   background-image: url("/img/icon-cat-slim.svg");
   background-size: 35px 49px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     background-size: 140px 194px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     background-size: 70px 97px;
   }
 }
@@ -127,11 +127,11 @@
   background-image: url("/img/icon-cat-pro.svg");
   background-size: 67px 28px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     background-size: 268px 112px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     background-size: 134px 56px;
   }
 }
@@ -146,13 +146,13 @@
   text-transform: uppercase;
   color: #111111;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     margin: 82px 0 25px 0;
 
     font-size: 36px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media ($desktop) {
     margin: 82px 0 74px 162px;
 
     font-size: 36px;
@@ -171,7 +171,7 @@
 
   border-bottom: 1px solid #d9d9d9;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     margin: 0 0 50px 0;
     padding-bottom: 0;
 
@@ -198,7 +198,7 @@
   background-position: right 50%;
   background-size: 24px 11px;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     font-size: 20px;
   }
 }

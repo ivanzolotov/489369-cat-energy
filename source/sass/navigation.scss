@@ -50,7 +50,7 @@
 }
 
 
-@media (min-width: $tablet-width) {
+@media ($tablet) {
   .navigation__toggle {
     display: none;
   }
@@ -82,7 +82,7 @@
 }
 
 
-@media (min-width: $desktop-width) {
+@media ($desktop) {
   .navigation__item a {
     color: #ffffff;
   }

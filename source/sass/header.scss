@@ -16,7 +16,7 @@
 }
 
 
-@media (min-width: $tablet-width) {
+@media ($tablet) {
   .header {
     align-items: center;
     flex-direction: row;
@@ -34,7 +34,7 @@
 }
 
 
-@media (min-width: $desktop-width) {
+@media ($desktop) {
   .header__logo {
     width: 202px + 40px;
     height: 168px;

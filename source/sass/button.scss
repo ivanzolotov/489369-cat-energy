@@ -11,7 +11,7 @@
   display: block;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
+  @media ($tablet) {
     font-size: 20px;
     line-height: 52px;
   }

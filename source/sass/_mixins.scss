@@ -7,46 +7,131 @@
 }
 
 @mixin text-type-one {
-  font-family: "Oswald Regular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 25px;
-  text-transform: uppercase;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 @mixin text-type-two {
-  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
 }
 
 @mixin text-type-three {
-  font-family: "Oswald Regular", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
-  text-transform: uppercase;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 @mixin text-type-four {
-  font-family: "Arial", sans-serif;
+  color: #444444;
+
   font-size: 14px;
   line-height: 18px;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
-  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @mixin text-type-five {
-  font-family: "Oswald Regular", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   color: #111111;
 }
 
 @mixin normalize-ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
+}
+
+@mixin normalize-h {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin normalize-dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin root-block-layout {
+  display: flex;
+  margin: 0 auto;
+
+  width: calc(100% - 20px * 2);
+  min-width: calc(320px - 20px * 2);
+  max-width: calc(1300px - 40px * 2);
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: calc(100% - 30px * 2);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: calc((100% - (1300px - 40px * 2)) / 2);
+    padding-left: calc((100% - (1300px - 40px * 2)) / 2);
+    width: calc(100% - 40px * 2);
+  }
+}
+
+@mixin font-h2($color) {
+  color: $color;
+
+  font-size: 36px;
+  line-height: 1;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+@mixin font-basic {
+  color: #444444;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin hide {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+}
+
+@mixin unhide {
+  position: initial;
+
+  overflow: auto;
+  clip: auto;
+  width: auto;
+  height: auto;
 }

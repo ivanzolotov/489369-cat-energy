@@ -1,0 +1,122 @@
+.invitation {
+  @include root-block-layout;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+
+  background-image: url("/img/map.png");
+  background-repeat: repeat-x;
+  background-position: left 50% bottom 0;
+  background-size: auto 362px;
+
+  @media (min-width: $tablet-width) {
+    background-size: auto 396px;
+  }
+}
+
+.invitation__title {
+  @include normalize-h;
+
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin-top: 27px;
+  margin-bottom: 27px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #111111;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 25%;
+    padding-left: 75px;
+    padding-top: 63px;
+    padding-bottom: 0;
+    height: 200px;
+  }
+}
+
+.invitation__address {
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  align-self: center;
+  flex-basis: 50%;
+  margin-top: 27px;
+  margin-bottom: 27px;
+
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: right;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 25%;
+    padding-top: 63px;
+    padding-bottom: 0;
+    height: 200px;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+}
+
+.invitation__address p {
+  @include font-basic;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+}
+
+.invitation__address p:first-child {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.invitation__pin {
+  @include text-invisible;
+  box-sizing: border-box;
+
+  min-height: 362px;
+
+  flex-basis: 100%;
+  background-image: url("/img/map-pin.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 62px 53px;
+  // background-size: 62px 53px, 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 396px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 50%;
+    min-height: auto;
+  }
+}

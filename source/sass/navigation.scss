@@ -1,41 +1,93 @@
+.navigation__toggle {
+  @include text-invisible;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 65px;
+  height: 65px;
+
+  background-color: #ffffff;
+  background-image: url("/img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 24px 18px;
+
+  cursor: pointer;
+}
+
 .navigation__real-toggle {
   display: none;
 }
 
 .navigation__real-toggle:checked ~ .navigation__list {
-  display: none;
-}
-
-.navigation__toggle {
-  @include text-invisible;
-  background-color: #ffffff;
-  background-image: url("/img/icon-mobile-menu.svg");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  top: 0;
-  right: 0;
-  position: absolute;
-  background-size: 24px 18px;
-  width: 65px;
-  height: 65px;
-  display: block;
-  margin: 0;
-  padding: 0;
+  @include hide;
 }
 
 .navigation__list {
   @include normalize-ul;
+
   display: flex;
   flex-direction: column;
+  margin-right: -$mobile-offset;
+  margin-left: -$mobile-offset;
 }
 
 .navigation__item {
-  height: 60px;
-  font-family: "Oswald Medium", "Arial", sans-serif;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.navigation__item a {
+  display: block;
   font-size: 20px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #111111;
+  line-height: 60px;
+  font-family: "Oswald Medium", "Arial", sans-serif;
   text-transform: uppercase;
-  border-bottom: 1px solid #e6e6e6;
+  text-decoration: none;
+  color: #111111;
+}
+
+
+@media (min-width: $tablet-width) {
+  .navigation__toggle {
+    display: none;
+  }
+
+  .navigation__real-toggle:checked ~ .navigation__list {
+    @include unhide;
+  }
+
+  .navigation__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+  .navigation__item {
+    border-top: none;
+  }
+
+  .navigation__item a {
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    font-size: 18px;
+  }
+
+  .navigation__item:not(:first-child) a {
+    margin-left: 36px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .navigation__item a {
+    color: #ffffff;
+  }
+
+  .navigation__list {
+    max-width: 530px;
+  }
 }

@@ -1,29 +1,42 @@
 .header {
   @include root-block-layout;
-  flex-direction: column;
+
   position: relative;
-  z-index: 0;
 
-  min-width: 320px;
+  flex-direction: column;
+  max-width: 1220px - 2 * $desktop-offset;
 
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .header__logo {
-  @include outline;
   display: block;
-  height: 65px;
   width: 100%;
+  height: 65px;
+}
 
-  border-bottom: 1px solid #e6e6e6;
-  margin-right: auto;
 
-  @media (min-width: $tablet-width) {
-    @include outline;
-    width: 173px;
-    height: 82px;
-    border-bottom: 0;
+@media (min-width: $tablet-width) {
+  .header {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: none;
+  }
+
+  .header__logo {
+    align-self: flex-start;
+    flex-shrink: 0;
+    width: 175px + 40px;
+    height: 106px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .header__logo {
+    width: 202px + 40px;
+    height: 168px;
   }
 }

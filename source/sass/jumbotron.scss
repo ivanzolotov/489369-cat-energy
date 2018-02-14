@@ -1,83 +1,103 @@
 .jumbotron {
   @include root-block-layout;
+
   flex-direction: column;
+
   background-image: url("/img/index-can-mobile@1x.png"), url("/img/index-background-mobile@1x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 50% 167px, 50% 0, 0 0;
-  min-height: 502px;
-  align-self: flex-start;
-
-  @media (min-width: $tablet-width) {
-    min-height: 870px;
-    background-image: url("/img/index-can-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: 50% 260px;
-    background-size: auto 609px;
-  }
-
-  @media (min-width: $tablet-width) {
-    min-height: 665px;
-    background-position: 70% 30px;
-    background-size: auto 500px;
-  }
+  background-position: 50% 167px, 0 0, 0 0;
+  /* TODO: Заменить линейный градиент идеально соответствующим рисунку с котом */
 }
 
 .jumbotron__title {
   @include font-h2(#ffffff);
   @include normalize-h;
-  text-align: center;
-  margin-top: 32px;
 
-  @media (min-width: $tablet-width) {
-    color: #111111;
-    text-align: left;
-    margin-top: 60px;
-    padding-left: 90px;
-  }
+  margin-top: 32px;
+  margin-bottom: 20px;
+
+  text-align: center;
 }
 
-.jumbotron__subtitle {
+.jumbotron__slogan {
   @include normalize-h;
-  font-family: "Oswald Regular", "Arial", sans-serif;
+
+  margin-bottom: 302px;
+
   font-size: 14px;
   line-height: 1;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
-  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 20px;
-
-  @media (min-width: $tablet-width) {
-    color: #111111;
-    font-size: 20px;
-    margin-top: 45px;
-    text-align: left;
-    padding-left: 90px;
-  }
+  color: #ffffff;
 }
 
 .jumbotron__button {
-  display: block;
   margin-bottom: 22px;
-  margin-top: auto;
+}
 
-  @media (min-width: $tablet-width) {
-    margin-top: 45px;
-    margin-bottom: 0;
+
+@media (min-width: $tablet-width) {
+  .jumbotron {
+    background-image: url("/img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 260px;
+    background-size: auto 609px;
+    /* TODO: Поставить на фон реальное изображение и спозиционировать его по макету */
+  }
+
+  .jumbotron__title {
+    margin-top: 34px;
+    margin-bottom: 41px;
     margin-left: 90px;
-    max-width: 245px;
+
+    text-align: left;
+    color: #111111;
+  }
+
+  .jumbotron__slogan {
+    margin-bottom: 44px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    text-align: left;
+    color: #111111;
+  }
+
+  .jumbotron__button {
+    align-self: flex-start;
+    margin-bottom: 533px;
+    margin-left: 90px;
+    padding-right: 27px;
+    padding-left: 27px;
   }
 }
 
-.jumbotron::before {
-  @media (min-width: $desktop-width) {
+
+@media (min-width: $desktop-width) {
+  .jumbotron {
+    min-height: 665px;
+
+    background-position: 70% 30px;
+    background-size: auto 500px;
+  }
+
+  .jumbotron::before {
     position: absolute;
-    content: "";
-    width: calc(50% - 40px);
-    height: 695px;
-    background-color: #63a73a;
     top: 0;
     right: 0;
     z-index: -1;
+    // TODO: Спозиционировать относительно шапки, а не body
+
+    width: calc(50% - 40px);
+    height: 696px;
+
+    background-color: #63a73a;
+    background-image: url("/img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
+    content: "";
   }
 }

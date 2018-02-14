@@ -22,7 +22,7 @@
 }
 
 .navigation__real-toggle:checked ~ .navigation__list {
-  display: none;
+  @include hide;
 }
 
 .navigation__list {
@@ -56,7 +56,7 @@
   }
 
   .navigation__real-toggle:checked ~ .navigation__list {
-    display: flex;
+    @include unhide;
   }
 
   .navigation__list {

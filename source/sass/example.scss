@@ -22,15 +22,20 @@
 }
 
 .example__title {
-  @include font-h2(#111111);
   @include normalize-h;
 
-  margin-top: 31px;
-  margin-bottom: 38px;
+  color: #111111;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  margin-top: 25px;
+  margin-bottom: 34px;
 
   @media ($tablet) {
-    margin-top: 46px;
-    margin-bottom: 71px;
+    font-size: 60px;
+    margin-top: 36px;
+    margin-bottom: 63px;
   }
 
   @media ($desktop) {

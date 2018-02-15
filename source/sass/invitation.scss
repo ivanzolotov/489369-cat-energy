@@ -6,7 +6,7 @@
 
   background-color: #ffffff;
 
-  background-image: url("/img/map.png");
+  background-image: url("../img/map.png");
   background-repeat: repeat-x;
   background-position: left 50% bottom 0;
   background-size: auto 362px;
@@ -105,7 +105,7 @@
   min-height: 362px;
 
   flex-basis: 100%;
-  background-image: url("/img/map-pin.png");
+  background-image: url("../img/map-pin.png");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 62px 53px;

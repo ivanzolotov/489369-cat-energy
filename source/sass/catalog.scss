@@ -111,7 +111,7 @@
 }
 
 .catalog__item--slim::after {
-  background-image: url("/img/icon-cat-slim.svg");
+  background-image: url("../img/icon-cat-slim.svg");
   background-size: 35px 49px;
 
   @media ($tablet) {
@@ -124,7 +124,7 @@
 }
 
 .catalog__item--pro::after {
-  background-image: url("/img/icon-cat-pro.svg");
+  background-image: url("../img/icon-cat-pro.svg");
   background-size: 67px 28px;
 
   @media ($tablet) {
@@ -193,7 +193,7 @@
   text-transform: uppercase;
   color: #111111;
 
-  background-image: url("/img/icon-right-arrow-long.svg");
+  background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
   background-position: right 50%;
   background-size: 24px 11px;

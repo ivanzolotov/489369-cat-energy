@@ -77,8 +77,6 @@
 
 @media ($desktop) {
   .jumbotron {
-    min-height: 665px;
-
     background-position: 70% 30px;
     background-size: auto 500px;
   }
@@ -99,5 +97,9 @@
     background-size: auto 100%;
 
     content: "";
+  }
+
+  .jumbotron__button {
+    margin-bottom: 297px;
   }
 }

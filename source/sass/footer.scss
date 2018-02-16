@@ -4,47 +4,70 @@
   flex-direction: column;
 
   background-color: #f2f2f2;
-
-  @media ($tablet) {
-    min-height: 150px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 .footer__logo {
-  @include outline;
-  display: block;
   min-height: 94px;
+
   border-bottom: 1px solid #d9d9d9;
-  min-width: 150px;
 }
 
 .footer__socials {
   @include text-invisible;
-  @include outline;
+
   border-bottom: 1px solid #d9d9d9;
 }
 
 .footer__copyright {
-  @include outline;
-  display: block;
   position: relative;
-  height: 78px;
-  min-width: 200px;
+
+  display: block;
+  height: 79px;
+
+  font-size: 16px;
+  line-height: 79px;
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
+  color: #444444;
 }
 
 .footer__copyright::after {
   position: absolute;
+  top: 0;
   right: 0;
 
   display: block;
-  width: 30px;
-  height: 40px;
+  width: 27px;
+  height: 79px;
 
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
+  background-position: 50%;
 
   content: "";
+}
+
+@media ($tablet) {
+  $offset: 160px;
+
+  .footer {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    min-width: $offset;
+    height: 150px;
+
+    border-bottom: none;
+  }
+
+  .footer__socials {
+    border-bottom: none;
+  }
+
+  .footer__copyright {
+    min-width: $offset;
+  }
 }

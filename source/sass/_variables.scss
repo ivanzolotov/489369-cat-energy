@@ -2,8 +2,10 @@ $colorGreen: #68b738;
 
 $tablet: "min-width: 766px";
 $desktop: "min-width: 1300px";
+$retina: "min-resolution: 144dpi), (min-resolution: 1.5dppx";
 
 // TODO: Вычистить всюду эти переменные, идея как-то не взлетела
 $mobile-offset: 20px;
 $tablet-offset: 30px;
 $desktop-offset: 40px;
+

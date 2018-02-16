@@ -5,21 +5,19 @@
   justify-content: space-between;
 
   background-color: #ffffff;
-
-  background-image: url("../img/map.png");
-  background-repeat: repeat-x;
+  background-image: url("../img/bg-map-mobile@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
+  background-repeat: no-repeat, repeat-x;
   background-position: left 50% bottom 0;
   background-size: auto 362px;
 
-  @media ($tablet) {
-    background-size: auto 396px;
+  @media ($retina) {
+    background-image: url("../img/bg-map-mobile@2x.png");
   }
 }
 
 .invitation__title {
   @include normalize-h;
 
-  background-color: #ffffff;
   box-sizing: border-box;
   margin-top: 27px;
   margin-bottom: 27px;
@@ -30,52 +28,19 @@
   text-transform: uppercase;
   color: #111111;
 
-  @media ($tablet) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-
-    font-size: 20px;
-    line-height: 25px;
-    padding-left: 40px;
-  }
-
-  @media ($desktop) {
-    flex-basis: 25%;
-    padding-left: 75px;
-    padding-top: 63px;
-    padding-bottom: 0;
-    height: 200px;
-  }
+  background-color: #ffffff;
 }
 
 .invitation__address {
-  background: #ffffff;
-
-  box-sizing: border-box;
-
   align-self: center;
   flex-basis: 50%;
+  box-sizing: border-box;
   margin-top: 27px;
   margin-bottom: 27px;
 
   text-align: left;
 
-  @media ($tablet) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    text-align: right;
-    padding-right: 40px;
-  }
-
-  @media ($desktop) {
-    flex-basis: 25%;
-    padding-top: 63px;
-    padding-bottom: 0;
-    height: 200px;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 40px;
-  }
+  background: #ffffff;
 }
 
 .invitation__address p {
@@ -85,37 +50,101 @@
   margin-bottom: 0;
 
   line-height: 20px;
-
-  @media ($tablet) {
-    line-height: 20px;
-  }
-}
-
-.invitation__address p:first-child {
-  @media ($tablet) {
-    margin-bottom: 20px;
-  }
 }
 
 .invitation__pin {
   @include text-invisible;
-  box-sizing: border-box;
-
-  min-height: 362px;
 
   flex-basis: 100%;
+  box-sizing: border-box;
+  min-height: 362px;
+
   background-image: url("../img/map-pin.png");
+  // TODO: Нарисовать пин на CSS
+
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 62px 53px;
-  // background-size: 62px 53px, 100%;
+}
 
-  @media ($tablet) {
-    min-height: 396px;
+
+@media ($tablet) {
+  .invitation {
+    background-image: url("../img/bg-map-tablet@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
+    background-size: auto 396px;
+
+    @media ($retina) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
-  @media ($desktop) {
+  .invitation__title {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .invitation__address {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-right: 40px;
+
+    text-align: right;
+  }
+
+  .invitation__address p {
+    line-height: 20px;
+  }
+
+  .invitation__address p:first-child {
+    margin-bottom: 20px;
+  }
+
+  .invitation__pin {
+    min-height: 396px;
+    background-size: 124px 106px;
+  }
+}
+
+@media ($desktop) {
+  .invitation {
+    min-height: 396px;
+    background-image: url("../img/bg-map-desktop@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
+
+    @media ($retina) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+  }
+
+  .invitation__title {
+    flex-basis: 25%;
+    height: 200px;
+    padding-top: 63px;
+    padding-bottom: 0;
+    padding-left: 75px;
+    margin-top: 100px;
+    margin-bottom: auto;
+  }
+
+  .invitation__address {
+    flex-basis: 25%;
+    height: 200px;
+    padding-top: 63px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 40px;
+
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: auto;
+  }
+
+  .invitation__pin {
     flex-basis: 50%;
     min-height: auto;
+    background-position: 56% 50%;
   }
 }

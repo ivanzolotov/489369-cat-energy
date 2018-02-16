@@ -57,18 +57,34 @@
 
 .how-it-works__item--salubrious::before {
   background-image: url("../img/advantage-leaf@1x.png");
+
+  @media ($retina) {
+    background-image: url("../img/advantage-leaf@2x.png");
+  }
 }
 
 .how-it-works__item--flour::before {
   background-image: url("../img/advantage-powder@1x.png");
+
+  @media ($retina) {
+    background-image: url("../img/advantage-powder@2x.png");
+  }
 }
 
 .how-it-works__item--swap::before {
   background-image: url("../img/advantage-dining@1x.png");
+
+  @media ($retina) {
+    background-image: url("../img/advantage-dining@2x.png");
+  }
 }
 
 .how-it-works__item--result::before {
   background-image: url("../img/advantage-clock@1x.png");
+
+  @media ($retina) {
+    background-image: url("../img/advantage-clock@2x.png");
+  }
 }
 
 

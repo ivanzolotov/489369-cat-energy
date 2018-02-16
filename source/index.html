@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Cat Energy — функциональное питание для котов</title>
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="header">
@@ -67,10 +68,21 @@
           <dd class="example__results-value example__results-value--expenses">15 000 руб.</dd>
         </dl>
         <div class="example__slider">
-          <label class="example__toggle" for="example-toggle">Это лейбл</label>
           <input class="example__real-toggle" type="checkbox" id="example-toggle">
-          <img class="example__cat example__cat--fat" width="320" height="240" src="/img/before-mobile@1x.png" alt="Борис до перехода на корм Cat Energy Slim">
-          <img class="example__cat example__cat--slim" width="320" height="240" src="/img/after-mobile@1x.png" alt="Постройневший Борис через два месяца после замены корма на Cat Energy Slim">
+          <label class="example__toggle" for="example-toggle">Это лейбл</label>
+
+          <picture class="example__cat example__cat--fat">
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+            <source media="(min-width: 766px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до перехода на корм Cat Energy Slim">
+          </picture>
+
+          <picture class="example__cat example__cat--slim">
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+            <source media="(min-width: 766px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+            <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Постройневший Борис через два месяца после замены корма на Cat Energy Slim">
+          </picture>
+
         </div>
       </section>
       <section class="invitation">

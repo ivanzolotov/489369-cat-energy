@@ -83,8 +83,12 @@
 
 
 @media ($desktop) {
-  .navigation__item a {
+  .navigation__list a {
     color: #ffffff;
+  }
+
+  .navigation__list--internal a {
+    color: #111111;
   }
 
   .navigation__list {

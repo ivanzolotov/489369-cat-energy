@@ -1,25 +1,27 @@
 .logo {
   @include text-invisible;
-
-  background-image: url("../img/logo-mobile-header.svg"), url("../img/icon-logo-mobile.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 50%, 0 50%;
 }
 
 .logo--header {
+  background-image: url("../img/logo-mobile-header.svg"), url("../img/icon-logo-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
   background-size: 101px 18px, 33px 38px;
+  background-position: 50% 50%, 0 50%;
 }
 
 .logo--footer {
   background-image: url("../img/logo-mobile-header.svg");
   background-size: 128px 24px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 
 @media ($tablet) {
   .logo--header {
-    background-position: 90px 50%, 0 50%;
-    background-size: 85px 18px, 70px 58px;
+    background-image: url("../img/logo-tablet.svg");
+    background-position: 0 50%;
+    background-size: 172px 58px;
   }
 
   .logo--footer {
@@ -30,7 +32,7 @@
 
 @media ($desktop) {
   .logo--header {
-    background-position: 85px 50%, 0 50%;
-    background-size: 120px 23px, 70px 58px;
+    background-image: url("../img/logo-desktop.svg");
+    background-size: 202px 60px;
   }
 }

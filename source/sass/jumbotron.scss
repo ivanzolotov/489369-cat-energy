@@ -6,7 +6,12 @@
   background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 50% 167px, 0 0, 0 0;
+  background-size: auto 271px, 320px 305px, 100% 100%;
   /* TODO: Заменить линейный градиент идеально соответствующим рисунку с котом */
+
+  @media ($retina) {
+    background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg"), linear-gradient(#63a73a 305px, #ffffff 305px);
+  }
 }
 
 .jumbotron__title {
@@ -39,17 +44,19 @@
 
 @media ($tablet) {
   .jumbotron {
-    background-image: url("../img/index-can-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: 50% 260px;
-    background-size: auto 609px;
-    /* TODO: Поставить на фон реальное изображение и спозиционировать его по макету */
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-position: 50% 235px;
+    background-size: 709px 609px;
+
+    @media ($retina) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
   }
 
   .jumbotron__title {
     margin-top: 34px;
     margin-bottom: 41px;
-    margin-left: 90px;
+    margin-left: 87px;
 
     text-align: left;
     color: #111111;
@@ -57,7 +64,7 @@
 
   .jumbotron__slogan {
     margin-bottom: 44px;
-    margin-left: 90px;
+    margin-left: 87px;
 
     font-size: 20px;
     text-align: left;
@@ -67,7 +74,7 @@
   .jumbotron__button {
     align-self: flex-start;
     margin-bottom: 533px;
-    margin-left: 90px;
+    margin-left: 87px;
     padding-right: 27px;
     padding-left: 27px;
   }
@@ -76,8 +83,15 @@
 
 @media ($desktop) {
   .jumbotron {
-    background-position: 70% 30px;
-    background-size: auto 500px;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-position: 64% 0;
+    background-size: auto 499px;
+    margin-top: -30px;
+    padding-top: 30px;
+
+    @media ($retina) {
+      background-image: url("../img/index-can-desktop@2x.png");
+    }
   }
 
   .jumbotron::before {
@@ -91,11 +105,15 @@
     height: 696px;
 
     background-color: #63a73a;
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: auto 100%;
 
     content: "";
+
+    @media ($retina) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .jumbotron__button {

@@ -2,6 +2,7 @@
   @include root-block-layout;
 
   flex-direction: column;
+  border-bottom: 1px solid #ededed;
 }
 
 .main-catalog__item {
@@ -127,12 +128,41 @@
   font-size: 16px;
 }
 
+.main-catalog__item:last-child {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-position: 50% 26px;
+  background-size: 30px;
+}
+
+.main-catalog__item--more .main-catalog__item-name {
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 79px;
+  margin-bottom: 9px;
+}
+
+.main-catalog__item--more p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.3;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #444444;
+}
+
 
 @media ($tablet) {
   .main-catalog {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-bottom: none;
   }
 
   .main-catalog__item {
@@ -245,6 +275,39 @@
     margin-bottom: 40px;
     line-height: 40px;
   }
+
+  .main-catalog__item:last-child {
+    border: 1px solid #e6e6e6;
+    background-image: url("../img/icon-plus.svg");
+    background-position: 50% 55px;
+    background-size: 60px 60px;
+    margin-top: 140px;
+  }
+
+  .main-catalog__item--more .main-catalog__item-name {
+    width: 150px;
+    margin-top: 160px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .main-catalog__item--more p {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 200px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-catalog__item--more .button {
+    margin-top: auto;
+    margin-bottom: 40px;
+    line-height: 40px;
+  }
 }
 
 
@@ -264,7 +327,7 @@
   }
 
   .main-catalog__item--chicken-small {
-    background-image: url("../img/chicken-small-desktop@2x.png"), linear-gradient(#ffffff 142px, #f2f2f2 142px);
+    background-image: url("../img/catalog-chicken-desktop@1x.png"), linear-gradient(#ffffff 142px, #f2f2f2 142px);
 
     @media ($retina) {
       background-image: url("../img/chicken-small-desktop@2x.png"), linear-gradient(#ffffff 142px, #f2f2f2 142px);
@@ -317,5 +380,24 @@
     @media ($retina) {
       background-image: url("../img/rice-small-desktop@2x.png"), linear-gradient(#ffffff 142px, #f2f2f2 142px);
     }
+  }
+
+  .main-catalog__item-name {
+    margin-top: 302px;
+  }
+
+  .main-catalog__item:last-child {
+    background-image: url("../img/icon-plus.svg");
+    background-position: 50% 55px;
+    background-size: 60px 60px;
+    margin-top: 142px;
+  }
+
+  .main-catalog__item--more .button {
+    font-size: 16px;
+  }
+
+  .main-catalog__item--more p {
+    width: auto;
   }
 }

@@ -5,7 +5,7 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var cssmin = require('gulp-cssmin');
+var cssmin = require("gulp-cssmin");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
@@ -19,24 +19,24 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task('buildHtml', function () {
-  gulp.src('./source/*.html')
-    .pipe(gulp.dest('./build'));
+gulp.task("buildHtml", function () {
+  gulp.src("./source/*.html")
+    .pipe(gulp.dest("./build"));
 });
 
-gulp.task('buildFonts', function () {
-  gulp.src('./source/fonts/**/*.{woff,woff2}')
-    .pipe(gulp.dest('./build/fonts'));
+gulp.task("buildFonts", function () {
+  gulp.src("./source/fonts/**/*.{woff,woff2}")
+    .pipe(gulp.dest("./build/fonts"));
 });
 
-gulp.task('buildImages', function () {
-  gulp.src('./source/img/**/*.{png,jpg,svg}')
-    .pipe(gulp.dest('./build/img'));
+gulp.task("buildImages", function () {
+  gulp.src("./source/img/**/*.{png,jpg,svg}")
+    .pipe(gulp.dest("./build/img"));
 });
 
-gulp.task('buildStyles', function () {
-  gulp.src('./source/css/style.css')
-    .pipe(gulp.dest('./build/css'));
+gulp.task("buildStyles", function () {
+  gulp.src("./source/css/style.css")
+    .pipe(gulp.dest("./build/css"));
 });
 
 gulp.task("build", ["buildStyles", "buildHtml", "buildFonts", "buildImages"], function() {

@@ -15,6 +15,16 @@
   }
 }
 
+.invitation--catalog,
+.invitation--catalog .invitation__title,
+.invitation--catalog .invitation__address {
+  background-color: #f2f2f2;
+
+  @media ($desktop) {
+    background-color: #ffffff;
+  }
+}
+
 .invitation__title {
   @include normalize-h;
 

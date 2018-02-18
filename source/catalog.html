@@ -29,7 +29,7 @@
       <h1 class="main__heading">Каталог продукции</h1>
       <section class="main-catalog">
         <h2 class="visually-hidden">Основные товары</h2>
-        <article class="main-catalog__item main-catalog__item--chicken-small">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/catalog-chicken-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.jpg 2x">
@@ -46,7 +46,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--chicken-big">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.jpg 2x">
@@ -63,7 +63,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--fish-small">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.jpg 2x">
@@ -80,7 +80,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--fish-big">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.jpg 2x">
@@ -97,7 +97,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--buckwheat-small">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.jpg 2x">
@@ -114,7 +114,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--buckwheat-big">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.jpg 2x">
@@ -131,7 +131,7 @@
           </dl>
           <a class="main-catalog__order button" href="#">Заказать</a>
         </article>
-        <article class="main-catalog__item main-catalog__item--rice-small">
+        <article class="main-catalog__item">
           <picture class="main-catalog__item-picture">
             <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
             <source media="(min-width: 766px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.jpg 2x">
@@ -155,40 +155,46 @@
         </a>
       </section>
       <section class="additional-catalog">
-        <h2 class="additional-catalog__title">Дополнительные товары</h2>
-        <article class="additional-catalog__item">
-          <h3 class="additional-catalog__item-name">Сахорозаменитель</h3>
-          <dl class="additional-catalog__item-description">
-            <dt>1 упаковка</dt>
-            <dd>100 Р.</dd>
-          </dl>
-        </article>
-        <article class="additional-catalog__item">
-          <h3 class="additional-catalog__item-name">Питьевая вода</h3>
-          <dl class="additional-catalog__item-description">
-            <dt>5 литров</dt>
-            <dd>50 Р.</dd>
-          </dl>
-        </article>
-        <article class="additional-catalog__item">
-          <h3 class="additional-catalog__item-name">Молоко</h3>
-          <dl class="additional-catalog__item-description">
-            <dt>1 литр</dt>
-            <dd>100 Р.</dd>
-          </dl>
-        </article>
-        <article class="additional-catalog__item">
-          <h3 class="additional-catalog__item-name">Витамины</h3>
-          <dl class="additional-catalog__item-description">
-            <dt>1 упаковка (30 г)</dt>
-            <dd>300 Р.</dd>
-          </dl>
-        </article>
+        <h2 class="additional-catalog__title"><span>Дополнительные товары</span></h2>
+        <div class="additional-catalog__wrapper">
+          <article class="additional-catalog__item">
+            <h3 class="additional-catalog__item-name">Сахорозаменитель</h3>
+            <dl class="additional-catalog__item-description">
+              <dt>1 упаковка</dt>
+              <dd>100 Р.</dd>
+            </dl>
+            <a class="additional-catalog__order button" href="#">Заказать</a>
+          </article>
+          <article class="additional-catalog__item">
+            <h3 class="additional-catalog__item-name">Питьевая вода</h3>
+            <dl class="additional-catalog__item-description">
+              <dt>5 литров</dt>
+              <dd>50 Р.</dd>
+            </dl>
+            <a class="additional-catalog__order button" href="#">Заказать</a>
+          </article>
+          <article class="additional-catalog__item">
+            <h3 class="additional-catalog__item-name">Молоко</h3>
+            <dl class="additional-catalog__item-description">
+              <dt>1 литр</dt>
+              <dd>100 Р.</dd>
+            </dl>
+            <a class="additional-catalog__order button" href="#">Заказать</a>
+          </article>
+          <article class="additional-catalog__item">
+            <h3 class="additional-catalog__item-name">Витамины</h3>
+            <dl class="additional-catalog__item-description">
+              <dt>1 упаковка (30 г)</dt>
+              <dd>300 Р.</dd>
+            </dl>
+            <a class="additional-catalog__order button" href="#">Заказать</a>
+          </article>
+        </div>
+        <aside class="additional-catalog__promo">
+          <b>Закажите все и получите чехол для кота в подарок!</b>
+        </aside>
       </section>
-      <section class="promo promo--cat-case">
-        <b>Закажите все и получите чехол для кота в подарок!</b>
-      </section>
-      <section class="invitation">
+      <section class="invitation invitation--catalog">
         <h2 class="invitation__title">Приглашаем
           <br>к сотрудничеству
           <br>дилеров!</h2>

@@ -6,48 +6,6 @@
   font-size: 0;
 }
 
-@mixin text-type-one {
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-@mixin text-type-two {
-  font-size: 14px;
-  line-height: 20px;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-}
-
-@mixin text-type-three {
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-@mixin text-type-four {
-  color: #444444;
-
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-
-  @media ($tablet) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-@mixin text-type-five {
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-  color: #111111;
-}
-
 @mixin normalize-ul {
   margin: 0;
   padding: 0;
@@ -58,6 +16,14 @@
 @mixin normalize-h {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@mixin normalize-input {
+  overflow: visible;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 @mixin root-block-layout {

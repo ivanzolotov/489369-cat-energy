@@ -9,6 +9,10 @@
   font-weight: 400;
 }
 
+.main__heading--form {
+  margin-bottom: 0;
+}
+
 
 @media ($tablet) {
   .main__heading {
@@ -17,6 +21,10 @@
 
     font-size: 60px;
   }
+
+  .main__heading--form {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -24,5 +32,9 @@
   .main__heading {
     margin-top: 11px;
     margin-bottom: 13px;
+  }
+
+  .main__heading--form {
+    margin-bottom: 0;
   }
 }

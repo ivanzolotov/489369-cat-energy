@@ -42,13 +42,12 @@
 .navigation__item a {
   display: block;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 42px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   color: #111111;
 }
-
 
 @media ($tablet) {
   .navigation__toggle {
@@ -78,6 +77,10 @@
 
   .navigation__item:not(:first-child) a {
     margin-left: 36px;
+  }
+
+  .navigation__item a:not([href]) {
+    border-bottom: 3px solid $colorGreen;
   }
 }
 

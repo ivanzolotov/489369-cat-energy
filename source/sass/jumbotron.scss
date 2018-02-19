@@ -86,7 +86,7 @@
 @media ($desktop) {
   .jumbotron {
     background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 64% 0;
+    background-position: 63% 4px;
     background-size: auto 499px;
     margin-top: -30px;
     padding-top: 30px;
@@ -119,6 +119,17 @@
   }
 
   .jumbotron__button {
-    margin-bottom: 297px;
+    margin-bottom: 268px;
+    margin-left: 80px;
+  }
+
+  .jumbotron__title {
+    margin-top: 54px;
+    margin-left: 80px;
+  }
+
+  .jumbotron__slogan {
+    margin-left: 80px;
+    margin-bottom: 53px;
   }
 }

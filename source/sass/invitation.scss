@@ -140,12 +140,12 @@
   }
 
   .invitation__address {
-    flex-basis: 25%;
+    flex-basis: 22%;
     height: 200px;
     padding-top: 63px;
     padding-right: 0;
     padding-bottom: 0;
-    padding-left: 40px;
+    padding-left: 20px;
 
     text-align: left;
     margin-top: 100px;
@@ -153,8 +153,8 @@
   }
 
   .invitation__pin {
-    flex-basis: 50%;
+    flex-basis: 53%;
     min-height: auto;
-    background-position: 56% 50%;
+    background-position: 60% 51%;
   }
 }

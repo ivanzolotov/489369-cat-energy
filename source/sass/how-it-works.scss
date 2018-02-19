@@ -140,8 +140,8 @@
 
 @media ($desktop) {
   .how-it-works__title {
-    margin-top: 73px;
-    margin-bottom: 72px;
+    margin-top: 64px;
+    margin-bottom: 63px;
   }
 
   .how-it-works__list {
@@ -155,10 +155,8 @@
     min-height: 255px;
     padding-right: 0;
   }
-}
 
-.how-it-works__item::after {
-  @media ($desktop) {
-    right: 0;
+  .how-it-works__item::after {
+    left: 47%;
   }
 }

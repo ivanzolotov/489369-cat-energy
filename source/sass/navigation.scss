@@ -97,4 +97,16 @@
   .navigation__list {
     max-width: 530px;
   }
+
+  .navigation__item a {
+    font-size: 20px;
+  }
+
+  .navigation__item:not(:first-child) a {
+    margin-left: 35px;
+  }
+
+  .navigation__item a:not([href]) {
+    border-bottom: 3px solid #ffffff;
+  }
 }

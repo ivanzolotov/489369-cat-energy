@@ -106,7 +106,11 @@
     margin-left: 35px;
   }
 
-  .navigation__item a:not([href]) {
+  .navigation__list a:not([href]) {
     border-bottom: 3px solid #ffffff;
+  }
+
+  .navigation__list--internal a:not([href]) {
+    border-bottom: 3px solid $colorGreen;
   }
 }

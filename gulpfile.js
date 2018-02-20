@@ -12,17 +12,17 @@ var run = require("run-sequence");
 var imagemin = require("gulp-imagemin");
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("./build");
 });
 
 gulp.task("styles", function() {
-  gulp.src("source/sass/style.scss")
+  gulp.src("./source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("./source/css"))
     .pipe(cssmin())
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
@@ -54,7 +54,7 @@ gulp.task("build", function(done) {
 
 gulp.task("serve", ["styles"], function() {
   server.init({
-    server: "source/",
+    server: "./source/",
     notify: false,
     open: true,
     cors: true,

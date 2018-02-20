@@ -29,57 +29,51 @@
       <h1 class="main__heading main__heading--form">Подбор программы</h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
-
-        <section class="form__item form__item--cat">
-        <!-- TODO: Разобраться: при оформлении филдсетом перестаёт работать как флекс-контейнер -->
+        <section class="form__item">
           <div class="form__legend">Заполните анкету и мы подберем программу питания для вашего кота</div>
-          <div class="form__fieldset">
+          <div class="cat-form__details">
             <div class="form__input-wraper">
-              <label class="form__label" for="name">Имя:*</label>
+              <label class="form__label form__label--text" for="name">Имя:*</label>
               <input class="form__input form__input--text" name="name" id="name" type="text">
             </div>
             <div class="form__input-wraper">
-              <label class="form__label" for="mass">Вес (кг):*</label>
+              <label class="form__label form__label--text" for="mass">Вес (кг):*</label>
               <input class="form__input form__input--text" name="mass" id="mass" type="text">
             </div>
             <div class="form__input-wraper">
-              <label class="form__label" for="age">Возраст (лет):</label>
+              <label class="form__label form__label--text" for="age">Возраст (лет):</label>
               <input class="form__input form__input--text" name="age" id="age" type="text">
             </div>
           </div>
-          <div class="form__fieldset form__fieldset--wide">
-            <div class="form__input-wraper">
-              <input class="form__input form__input--radio" id="slim" name="aim" value="slim" type="radio">
+          <div class="cat-form__aim">
+            <div class="form__input-wraper form__input-wraper--radio">
+              <input class="form__input form__input--radio" id="slim" name="aim" value="slim" type="radio" checked>
               <label class="form__label form__label--radio" for="slim">Похудение</label>
             </div>
-            <div class="form__input-wraper">
+            <div class="form__input-wraper form__input-wraper--radio">
               <input class="form__input form__input--radio" id="pro" name="aim" value="pro" type="radio">
               <label class="form__label form__label--radio" for="pro">Набор массы</label>
             </div>
-            <div class="form__input-wraper">
+            <div class="form__input-wraper form__input-wraper--radio">
               <input class="form__input form__input--radio" id="not-sure" name="aim" value="not-sure" type="radio">
               <label class="form__label form__label--radio" for="not-sure">Не знаю (нужен ваш совет)</label>
             </div>
           </div>
         </section>
 
-
-        <section class="form__item form__item--owner">
-          <div class="form__title"><span>Контактные данные <br>(владельца кота)</span></div>
-          <div class="form__fieldset">
-            <div class="form__input-wraper">
-              <label class="form__label" for="mail">E-mail:*</label>
-              <input class="form__input form__input--text" name="mail" id="mail" type="email">
-            </div>
+        <section class="form__item">
+          <div class="form__title form__title--owner"> <!-- Везде дальше тоже попробую юзать именно form__title, его потом нужно бы заменить на form__title -->
+            <span>Контактные данные (владельца кота)</span>
           </div>
-          <div class="form__fieldset">
-            <div class="form__input-wraper">
-              <label class="form__label" for="phone">Телефон:*</label>
-              <input class="form__input form__input--text" name="phone" id="phone" type="tel">
-            </div>
+          <div class="form__input-wraper form__input-wraper--two-in-row">
+            <label class="form__label form__label--text" for="mail">E-mail:*</label>
+            <input class="form__input form__input--text" name="mail" id="mail" type="email">
+          </div>
+          <div class="form__input-wraper form__input-wraper--two-in-row">
+            <label class="form__label form__label--text" for="phone">Телефон:*</label>
+            <input class="form__input form__input--text" name="phone" id="phone" type="tel">
           </div>
         </section>
-
 
         <section class="form__item">
           <div class="form__title">
@@ -87,35 +81,33 @@
           </div>
           <textarea class="form__textarea" name="full-description" placeholder="Расскажите обо всех повадках кота"></textarea>
         </section>
-
-
         <section class="form__item form__item--extra">
-          <div class="form__title">
+          <div class="form__title form__title--extra">
             <span>Дополнительно</span>
           </div>
-          <div class="form__input-wraper">
+          <div class="form__input-wraper form__input-wraper--checkbox form__input-wraper--four-in-row">
             <input class="form__input form__input--checkbox" id="sweetener" type="checkbox" name="additional" value="sweetener">
             <label class="form__label form__label--checkbox" for="sweetener">Сахорозаменитель</label>
           </div>
-          <div class="form__input-wraper">
+          <div class="form__input-wraper form__input-wraper--checkbox form__input-wraper--four-in-row">
             <input class="form__input form__input--checkbox" id="water" type="checkbox" name="additional" value="water">
             <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
           </div>
-          <div class="form__input-wraper">
+          <div class="form__input-wraper form__input-wraper--checkbox form__input-wraper--four-in-row">
             <input class="form__input form__input--checkbox" id="milk" type="checkbox" name="additional" value="milk">
             <label class="form__label form__label--checkbox" for="milk">Молоко</label>
           </div>
-          <div class="form__input-wraper">
+          <div class="form__input-wraper form__input-wraper--checkbox form__input-wraper--four-in-row">
             <input class="form__input form__input--checkbox" id="vitamins" type="checkbox" name="additional" value="vitamins">
             <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
           </div>
         </section>
 
 
-        <section class="form__item form__item--submittion">
+        <!-- <section class="form__item form__item--submittion">
           <button class="form__submit button" type="submit">Отправить заявку</button>
           <small class="form__disclamer">* — Обязательные поля</small>
-        </section>
+        </section> -->
 
 
       </form>

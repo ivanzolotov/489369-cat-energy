@@ -28,10 +28,9 @@
     <main class="main">
       <h1 class="main__heading main__heading--form">Подбор программы</h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-
         <section class="form__item">
           <div class="form__legend">Заполните анкету и мы подберем программу питания для вашего кота</div>
-          <div class="cat-form__details">
+          <div class="form__details">
             <div class="form__input-wraper">
               <label class="form__label form__label--text" for="name">Имя:*</label>
               <input class="form__input form__input--text" name="name" id="name" type="text">
@@ -45,7 +44,7 @@
               <input class="form__input form__input--text" name="age" id="age" type="text">
             </div>
           </div>
-          <div class="cat-form__aim">
+          <div class="form__aim">
             <div class="form__input-wraper form__input-wraper--radio">
               <input class="form__input form__input--radio" id="slim" name="aim" value="slim" type="radio" checked>
               <label class="form__label form__label--radio" for="slim">Похудение</label>
@@ -60,9 +59,8 @@
             </div>
           </div>
         </section>
-
         <section class="form__item">
-          <div class="form__title form__title--owner"> <!-- Везде дальше тоже попробую юзать именно form__title, его потом нужно бы заменить на form__title -->
+          <div class="form__title form__title--owner">
             <span>Контактные данные (владельца кота)</span>
           </div>
           <div class="form__input-wraper form__input-wraper--two-in-row">
@@ -74,7 +72,6 @@
             <input class="form__input form__input--text" name="phone" id="phone" type="tel">
           </div>
         </section>
-
         <section class="form__item">
           <div class="form__title">
             <span>Комментарий</span>
@@ -102,12 +99,10 @@
             <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
           </div>
         </section>
-
-
-        <!-- <section class="form__item form__item--submittion">
+        <section class="form__item form__item--submittion">
           <button class="form__submit button" type="submit">Отправить заявку</button>
           <small class="form__disclamer">* — Обязательные поля</small>
-        </section> -->
+        </section>
 
 
       </form>

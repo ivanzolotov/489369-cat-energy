@@ -188,6 +188,12 @@
   color: #444444;
 }
 
+.form__icon {
+  position: absolute;
+  right: 14px;
+  fill: #444444;
+}
+
 
 @media ($tablet) {
   .form__legend {
@@ -329,6 +335,10 @@
     margin-left: 60px;
     font-size: 16px;
     margin-top: 10px;
+  }
+
+  .form__icon {
+    right: 20px;
   }
 }
 

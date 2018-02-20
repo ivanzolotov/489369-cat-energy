@@ -7,8 +7,15 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssmin = require("gulp-cssmin");
 var server = require("browser-sync").create();
+var del = require("del");
+var run = require("run-sequence");
+var imagemin = require("gulp-imagemin");
 
-gulp.task("style", function() {
+gulp.task("clean", function () {
+  return del("build");
+});
+
+gulp.task("styles", function() {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -16,33 +23,36 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest("source/css"))
+    .pipe(cssmin())
+    .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
 });
 
-gulp.task("buildHtml", function () {
+gulp.task("html", function () {
   gulp.src("./source/*.html")
     .pipe(gulp.dest("./build"));
 });
 
-gulp.task("buildFonts", function () {
+gulp.task("fonts", function () {
   gulp.src("./source/fonts/**/*.{woff,woff2}")
     .pipe(gulp.dest("./build/fonts"));
 });
 
-gulp.task("buildImages", function () {
-  gulp.src("./source/img/**/*.{png,jpg,svg}")
+gulp.task("images", function () {
+  return gulp.src("./source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+]))
     .pipe(gulp.dest("./build/img"));
 });
 
-gulp.task("buildStyles", function () {
-  gulp.src("./source/css/style.css")
-    .pipe(gulp.dest("./build/css"));
+gulp.task("build", function(done) {
+  run("clean", "styles", "html", "fonts", "images", done);
 });
 
-gulp.task("build", ["buildStyles", "buildHtml", "buildFonts", "buildImages"], function() {
-});
-
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", ["styles"], function() {
   server.init({
     server: "source/",
     notify: false,
@@ -51,6 +61,6 @@ gulp.task("serve", ["style"], function() {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/sass/**/*.{scss,sass}", ["styles"]);
   gulp.watch("source/*.html").on("change", server.reload);
 });

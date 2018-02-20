@@ -10,6 +10,7 @@ var server = require("browser-sync").create();
 var del = require("del");
 var run = require("run-sequence");
 var imagemin = require("gulp-imagemin");
+var rename = require('gulp-rename');
 
 gulp.task("clean", function () {
   return del("./build");
@@ -22,6 +23,7 @@ gulp.task("styles", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest("./source/css"))
     .pipe(cssmin())
     .pipe(gulp.dest("./build/css"))

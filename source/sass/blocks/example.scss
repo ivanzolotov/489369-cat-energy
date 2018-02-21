@@ -140,11 +140,9 @@
   width: 84px;
   height: 16px;
   cursor: pointer;
-  background-color: chartreuse;
-}
-
-.example__real-toggle:checked ~ .example__toggle {
-  background-color: red;
+  border-radius: 10px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
 }
 
 .example__toggle::before,

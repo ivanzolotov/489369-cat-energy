@@ -7,10 +7,16 @@
   width: 30px;
   height: 30px;
   padding: 15px 12px;
+  background-color: red;
 
   background-repeat: no-repeat;
   background-position: 50%;
+  display: flex;
   // TODO: Цвет #666666
+}
+
+.social__icon {
+  margin: auto auto;
 }
 
 .social__link--vkontakte {
@@ -24,7 +30,7 @@
 }
 
 .social__link--facebook {
-  background-image: url("../img/icon-fb-mobile.svg");
+  // background-image: url("../img/icon-fb-mobile.svg");
   background-size: 10px 19px;
 }
 
@@ -44,7 +50,7 @@
   }
 
   .social__link--facebook {
-    background-image: url("../img/icon-fb.svg");
+    // background-image: url("../img/icon-fb.svg");
     background-size: 53px 28px;
   }
 }

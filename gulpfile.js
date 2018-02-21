@@ -11,6 +11,18 @@ var del = require("del");
 var run = require("run-sequence");
 var imagemin = require("gulp-imagemin");
 var rename = require('gulp-rename');
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+
+gulp.task("sprite", function () {
+  return gulp.src("./source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("icons.svg"))
+    .pipe(gulp.dest("./source/img"));
+});
 
 gulp.task("clean", function () {
   return del("./build");
@@ -31,7 +43,10 @@ gulp.task("styles", function() {
 });
 
 gulp.task("html", function () {
-  gulp.src("./source/*.html")
+  return gulp.src("./source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest("./build"));
 });
 
@@ -51,12 +66,12 @@ gulp.task("images", function () {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "styles", "html", "fonts", "images", done);
+  run("clean", "sprite", "styles", "fonts", "images", "html", done);
 });
 
-gulp.task("serve", ["styles"], function() {
+gulp.task("serve", ["build"], function() {
   server.init({
-    server: "./source/",
+    server: "./build/",
     notify: false,
     open: true,
     cors: true,

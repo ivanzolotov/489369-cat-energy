@@ -10,7 +10,7 @@ var server = require("browser-sync").create();
 var del = require("del");
 var run = require("run-sequence");
 var imagemin = require("gulp-imagemin");
-var rename = require('gulp-rename');
+var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
@@ -35,7 +35,7 @@ gulp.task("styles", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./source/css"))
     .pipe(cssmin())
     .pipe(gulp.dest("./build/css"))

@@ -9,11 +9,17 @@
   background-position: 50% 50%, 0 50%;
 }
 
-.logo--footer {
-  background-image: url("../img/logo-mobile-header.svg");
-  background-size: 128px 24px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.logo--footer .logo__icon {
+  fill: #111111;
+  margin: auto auto;
+}
+
+.logo--footer:hover .logo__icon {
+  fill: #3e3e3e;
+}
+
+.logo--footer:active .logo__icon {
+  fill: #6b6b6b;
 }
 
 

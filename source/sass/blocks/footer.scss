@@ -8,6 +8,7 @@
 
 .footer__logo {
   min-height: 94px;
+  display: flex;
 
   border-bottom: 1px solid #d9d9d9;
 }
@@ -21,7 +22,7 @@
 .footer__copyright {
   position: relative;
 
-  display: block;
+  display: flex;
   height: 79px;
 
   font-size: 16px;
@@ -29,23 +30,15 @@
   font-family: "Arial", sans-serif;
   text-decoration: none;
   color: #444444;
+
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footer__copyright::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: block;
-  width: 27px;
-  height: 79px;
-
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-
-  content: "";
+.footer__copyright-icon {
+  margin-left: auto;
 }
+
 
 @media ($tablet) {
   $offset: 160px;
@@ -70,5 +63,26 @@
   .footer__copyright {
     min-width: $offset;
     margin-top: 20px;
+  }
+
+  .footer__copyright-icon {
+    margin-left: 10px;
+    fill: #666666;
+  }
+
+  .footer__copyright:hover .footer__copyright-icon {
+    fill: $colorGreen;
+  }
+
+  .footer__copyright:active .footer__copyright-icon {
+    fill: $colorLightGreen;
+  }
+
+  .footer__copyright:hover {
+    color: #3e3e3e;
+  }
+
+  .footer__copyright:active {
+    color: #6b6b6b;
   }
 }

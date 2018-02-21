@@ -16,7 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
 gulp.task("sprite", function () {
-  return gulp.src("./source/img/icon-*.svg")
+  return gulp.src("./source/img/{icon-*.svg,logo-*.svg}")
     .pipe(svgstore({
       inlineSvg: true
     }))

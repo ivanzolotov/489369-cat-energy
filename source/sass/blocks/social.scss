@@ -7,50 +7,25 @@
   width: 30px;
   height: 30px;
   padding: 15px 12px;
-  background-color: red;
 
-  background-repeat: no-repeat;
-  background-position: 50%;
   display: flex;
-  // TODO: Цвет #666666
 }
 
 .social__icon {
   margin: auto auto;
+  fill: #666666;
 }
 
-.social__link--vkontakte {
-  background-image: url("../img/icon-vk-mobile.svg");
-  background-size: 22px 12px;
+.social__link:hover .social__icon {
+  fill: $colorGreen;
 }
 
-.social__link--instagram {
-  background-image: url("../img/icon-insta-mobile.svg");
-  background-size: 16px 19px;
-}
-
-.social__link--facebook {
-  // background-image: url("../img/icon-fb-mobile.svg");
-  background-size: 10px 19px;
+.social__link:active .social__icon {
+  fill: $colorLightGreen;
 }
 
 @media ($tablet) {
   .social__link {
     padding: 9px;
-  }
-
-  .social__link--vkontakte {
-    background-image: url("../img/icon-vk.svg");
-    background-size: 30px 16px;
-  }
-
-  .social__link--instagram {
-    background-image: url("../img/icon-insta.svg");
-    background-size: 23px 23px;
-  }
-
-  .social__link--facebook {
-    // background-image: url("../img/icon-fb.svg");
-    background-size: 53px 28px;
   }
 }

@@ -170,8 +170,8 @@
 }
 
 .form__input--radio:active + .form__label--radio::after {
-  border-color: #ccedc3;
-  background-color: #ccedc3;
+  border-color: $colorLightGreen;
+  background-color: $colorLightGreen;
 }
 
 .form__input--checkbox:active + .form__label--checkbox::after {

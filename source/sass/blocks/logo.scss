@@ -9,6 +9,14 @@
   background-position: 50% 50%, 0 50%;
 }
 
+.logo--header:hover {
+  opacity: 0.8;
+}
+
+.logo--header:active {
+  opacity: 0.6;
+}
+
 .logo--footer .logo__icon {
   fill: #111111;
   margin: auto auto;

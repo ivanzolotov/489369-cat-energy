@@ -7,10 +7,11 @@ $map_height: 362px;
   position: relative;
 
   flex-direction: column;
+  border: none;
 }
 
 .invitation--internal,
-.invitation--internal .invitaion__address-wrapper {
+.invitation--internal .invitation__address-wrapper {
   background-color: #f2f2f2;
 
   @media ($desktop) {
@@ -18,7 +19,7 @@ $map_height: 362px;
   }
 }
 
-.invitaion__address-wrapper {
+.invitation__address-wrapper {
   z-index: 1;
 
   display: flex;
@@ -71,7 +72,7 @@ $map_height: 362px;
   $address_height: 201px;
   $map_height: 396px;
 
-  .invitaion__address-wrapper {
+  .invitation__address-wrapper {
     min-height: $address_height;
   }
 
@@ -114,14 +115,17 @@ $map_height: 362px;
     background-color: #fef7ef;
   }
 
-  .invitaion__address-wrapper {
+  .invitation__address-wrapper {
     order: 2;
     box-sizing: border-box;
     width: 569px;
     min-height: calc(400px - 94px - 104px);
     margin-top: 94px;
-    margin-bottom: 94px;
-    padding: 66px;
+    margin-bottom: 104px;
+    padding-top: 66px;
+    padding-left: 66px;
+    padding-right: 66px;
+    padding-bottom: 56px;
   }
 
   .invitation__address-slogan {

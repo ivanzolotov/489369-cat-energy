@@ -42,6 +42,11 @@ gulp.task("styles", function() {
     .pipe(server.stream());
 });
 
+gulp.task("js", function () {
+  return gulp.src("./source/js/*.js")
+    .pipe(gulp.dest("./build/js"));
+});
+
 gulp.task("html", function () {
   return gulp.src("./source/*.html")
     .pipe(posthtml([
@@ -66,7 +71,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "sprite", "styles", "fonts", "images", "html", done);
+  run("clean", "sprite", "styles", "js", "fonts", "images", "html", done);
 });
 
 gulp.task("serve", ["build"], function() {

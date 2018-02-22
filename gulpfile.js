@@ -71,14 +71,14 @@ gulp.task("images", function () {
     .pipe(gulp.dest("./build/img"));
 });
 
-// gulp.task("webp", function () {
-//   gulp.src("./source/img/**/*.{png,jpg}")
-//     .pipe(webp({quality: 90}))
-//     .pipe(gulp.dest("./build/img"));
-// });
+gulp.task("webp", function () {
+  gulp.src("./source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("./build/img"));
+});
 
 gulp.task("build", function(done) {
-  run("clean", "sprite", "styles", "js", "fonts", "images", "html", done);
+  run("clean", "sprite", "styles", "js", "fonts", "images", "webp", "html", done);
 });
 
 gulp.task("serve", ["build"], function() {

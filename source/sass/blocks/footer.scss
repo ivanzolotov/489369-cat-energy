@@ -7,82 +7,101 @@
 }
 
 .footer__logo {
-  min-height: 94px;
-  display: flex;
+  height: 94px;
+
+  text-align: center;
 
   border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__logo svg {
+  margin-top: 39px;
+
+  fill: #111111;
+}
+
+.footer__logo:hover svg {
+  fill: #3e3e3e;
+}
+
+.footer__logo:active svg {
+  fill: #6b6b6b;
 }
 
 .footer__socials {
   @include text-invisible;
 
+  height: 62px;
+
   border-bottom: 1px solid #d9d9d9;
 }
 
 .footer__copyright {
-  position: relative;
-
   display: flex;
+  align-items: center;
   height: 79px;
 
   font-size: 16px;
-  line-height: 79px;
   font-family: "Arial", "Helvetica", sans-serif;
   text-decoration: none;
   color: #444444;
-
-  align-items: center;
-  justify-content: space-between;
 }
 
-.footer__copyright-icon {
+.footer__copyright svg {
   margin-left: auto;
+
+  fill: #666666;
+}
+
+.footer__copyright:hover svg {
+  fill: $colorGreen;
+}
+
+.footer__copyright:active svg {
+  fill: $colorLightGreen;
+}
+
+.footer__copyright:hover {
+  color: #3e3e3e;
+}
+
+.footer__copyright:active {
+  color: #6b6b6b;
 }
 
 
 @media ($tablet) {
-  $offset: 160px;
-
   .footer {
-    align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    height: 150px;
   }
 
   .footer__logo {
-    min-width: $offset;
-    height: 150px;
+    width: 155px;
+    margin-top: 26px;
+
+    text-align: left;
 
     border-bottom: none;
   }
 
   .footer__socials {
+    height: auto;
+    margin-top: 45px;
+
     border-bottom: none;
   }
 
   .footer__copyright {
-    min-width: $offset;
-    margin-top: 20px;
+    width: 163px;
+    margin-top: 47px;
   }
+}
 
-  .footer__copyright-icon {
-    margin-left: 10px;
-    fill: #666666;
-  }
 
-  .footer__copyright:hover .footer__copyright-icon {
-    fill: $colorGreen;
-  }
-
-  .footer__copyright:active .footer__copyright-icon {
-    fill: $colorLightGreen;
-  }
-
-  .footer__copyright:hover {
-    color: #3e3e3e;
-  }
-
-  .footer__copyright:active {
-    color: #6b6b6b;
+@media ($desktop) {
+  .footer__copyright {
+    margin-top: 39px;
   }
 }

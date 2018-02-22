@@ -4,28 +4,22 @@
 }
 
 .social__link {
+  display: flex;
   width: 30px;
   height: 30px;
   padding: 15px 12px;
-
-  display: flex;
 }
 
-.social__icon {
+.social__link svg {
   margin: auto auto;
+
   fill: #666666;
 }
 
-.social__link:hover .social__icon {
+.social__link:hover svg {
   fill: $colorGreen;
 }
 
-.social__link:active .social__icon {
+.social__link:active svg {
   fill: $colorLightGreen;
-}
-
-@media ($tablet) {
-  .social__link {
-    padding: 9px;
-  }
 }

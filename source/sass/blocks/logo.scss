@@ -17,29 +17,11 @@
   opacity: 0.6;
 }
 
-.logo--footer .logo__icon {
-  fill: #111111;
-  margin: auto auto;
-}
-
-.logo--footer:hover .logo__icon {
-  fill: #3e3e3e;
-}
-
-.logo--footer:active .logo__icon {
-  fill: #6b6b6b;
-}
-
-
 @media ($tablet) {
   .logo--header {
     background-image: url("../img/logo-tablet.svg");
     background-position: 0 50%;
     background-size: 172px 58px;
-  }
-
-  .logo--footer {
-    background-position: 0 50%;
   }
 }
 

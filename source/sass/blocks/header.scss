@@ -4,15 +4,48 @@
   position: relative;
 
   flex-direction: column;
-  max-width: 1220px;
 
   border-bottom: 1px solid #e6e6e6;
 }
 
+.header__toggle {
+  @include text-invisible;
+
+  display: block;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 65px;
+  height: 65px;
+
+  background-color: #ffffff;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 24px 18px;
+
+  cursor: pointer;
+}
+
 .header__logo {
+  @include text-invisible;
   display: block;
   width: 100%;
   height: 65px;
+  background-image: url("../img/logo-mobile-header.svg"), url("../img/icon-logo-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 101px 18px, 33px 38px;
+  background-position: 50% 50%, 0 50%;
+}
+
+.header__logo[href]:hover {
+  opacity: 0.8;
+}
+
+.header__logo[href]:active {
+  opacity: 0.6;
 }
 
 
@@ -25,11 +58,19 @@
     border-bottom: none;
   }
 
+  .header__toggle {
+    display: none;
+  }
+
   .header__logo {
     align-self: flex-start;
     flex-shrink: 0;
     width: 175px + 40px;
     height: 106px;
+
+    background-image: url("../img/logo-tablet.svg");
+    background-position: 0 50%;
+    background-size: 172px 58px;
   }
 }
 
@@ -38,5 +79,8 @@
   .header__logo {
     width: 202px + 40px;
     height: 168px;
+
+    background-image: url("../img/logo-desktop.svg");
+    background-size: 202px 60px;
   }
 }

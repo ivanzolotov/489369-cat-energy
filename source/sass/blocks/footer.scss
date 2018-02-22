@@ -20,11 +20,11 @@
   fill: #111111;
 }
 
-.footer__logo:hover svg {
+.footer__logo:hover[href] svg {
   fill: #3e3e3e;
 }
 
-.footer__logo:active svg {
+.footer__logo:active[href] svg {
   fill: #6b6b6b;
 }
 

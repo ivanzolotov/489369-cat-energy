@@ -19,6 +19,10 @@
   background-color: #f2f2f2;
 }
 
+.catalog__item p {
+  max-width: 100%; // IE11
+}
+
 .catalog__item:last-of-type {
   margin-bottom: 0;
 }

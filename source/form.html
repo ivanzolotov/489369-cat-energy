@@ -10,24 +10,25 @@
     <div style="display:none">
       <include src="./build/img/icons.svg"></include>
     </div>
+
+
     <header class="header">
-      <a class="header__logo logo logo--header" href="index.html">Cat Energy</a>
+      <a class="header__logo" href="index.html">Cat Energy</a>
+      <div class="header__toggle">Открыть меню</div>
       <nav class="navigation">
-        <label class="navigation__toggle" for="navigation-toggle">Открыть меню</label>
-        <input class="navigation__real-toggle" type="checkbox" id="navigation-toggle" checked>
-        <ul class="navigation__list navigation__list--internal">
-          <li class="navigation__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a>Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="navigation__list navigation__list--internal">
+        <li class="navigation__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="navigation__item">
+          <a>Подбор программы</a>
+        </li>
+      </ul>
     </header>
+
     <main class="main">
       <h1 class="main__heading main__heading--form">Подбор программы</h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
@@ -129,7 +130,7 @@
       </main>
 
     <footer class="footer">
-      <a class="footer__logo" href="#">
+      <a class="footer__logo" href="./index.html">
         <svg width="128" height="24">
           <use xlink:href="#logo-footer"></use>
         </svg>

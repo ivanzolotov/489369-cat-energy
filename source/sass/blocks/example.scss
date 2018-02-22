@@ -316,7 +316,8 @@ $example-height-desktop: 653px;
 @media ($desktop) {
   .example {
     flex-wrap: wrap;
-    height: $example-height-desktop;
+    min-height: $example-height-desktop;
+    max-height: 1.5 * $example-height-desktop;
     margin-top: $example-margin-top-desktop;
 
     background-image: linear-gradient(#ffffff 190px, #f2f2f2 190px);
@@ -336,6 +337,7 @@ $example-height-desktop: 653px;
 
   .example__results {
     width: calc(1300px / 2 - 2 * 40px);
+    margin-bottom: 70px;
   }
 
   .example__results-wrapper:not(:last-child) .example__results-key {

@@ -324,9 +324,8 @@ $example-height-desktop: 653px;
 
 @media ($desktop) {
   .example {
-    flex-wrap: wrap;
+    flex-direction: row;
     min-height: $example-height-desktop;
-    max-height: 1.5 * $example-height-desktop;
     margin-top: $example-margin-top-desktop;
 
     background-image: linear-gradient(#ffffff 190px, #f2f2f2 190px);
@@ -366,10 +365,12 @@ $example-height-desktop: 653px;
 
   /* No vertical margins here! */
   .example__figure {
-    align-self: flex-end;
+    align-self: flex-start;
+    justify-content: space-between;
     width: calc(1300px / 2 - 2 * 40px);
     height: $example-height-desktop;
     margin-top: 0;
+    margin-left: 80px;
   }
 
   .example__picture {

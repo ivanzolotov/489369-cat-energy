@@ -1,23 +1,16 @@
+$address_height: 114px;
+$map_height: 362px;
+
 .invitation {
   @include root-block-layout;
 
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
 
-  background-color: #ffffff;
-  background-image: url("../img/bg-map-mobile@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
-  background-repeat: no-repeat, repeat-x;
-  background-position: left 50% bottom 0;
-  background-size: auto 362px;
-
-  @media ($retina) {
-    background-image: url("../img/bg-map-mobile@2x.png");
-  }
+  flex-direction: column;
 }
 
 .invitation--internal,
-.invitation--internal .invitation__title,
-.invitation--internal .invitation__address {
+.invitation--internal .invitaion__address-wrapper {
   background-color: #f2f2f2;
 
   @media ($desktop) {
@@ -25,141 +18,137 @@
   }
 }
 
-.invitation__title {
+.invitaion__address-wrapper {
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  min-height: $address_height;
+
+  background-color: #ffffff;
+}
+
+.invitation__address-slogan {
   @include normalize-h;
 
   box-sizing: border-box;
+  width: 160px;
   margin-top: 27px;
-  margin-bottom: 27px;
 
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: #111111;
-
-  background-color: #ffffff;
-}
-
-.invitation__address {
-  align-self: center;
-  flex-basis: 50%;
-  box-sizing: border-box;
-  margin-top: 27px;
-  margin-bottom: 27px;
-
-  text-align: left;
-
-  background: #ffffff;
 }
 
 .invitation__address p {
-  color: #444444;
+  @include normalize-h;
+
+  width: 137px;
 
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  line-height: 20px;
 }
 
-.invitation__pin {
-  @include text-invisible;
+.invitation__address p:first-child {
+  margin-top: 31px;
+}
 
-  flex-basis: 100%;
-  box-sizing: border-box;
-  min-height: 362px;
+.invitation__map {
+  width: calc(100% + 40px);
+  min-height: $map_height;
+  margin-right: -20px;
+  margin-left: -20px;
 
-  background-image: url("../img/map-pin.png");
-  // TODO: Нарисовать пин на CSS
-
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 62px 53px;
+  background-color: #fef7ef;
 }
 
 
 @media ($tablet) {
-  .invitation {
-    background-image: url("../img/bg-map-tablet@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
-    background-size: auto 396px;
+  $address_height: 201px;
+  $map_height: 396px;
 
-    @media ($retina) {
-      background-image: url("../img/bg-map-tablet@2x.png");
-    }
+  .invitaion__address-wrapper {
+    min-height: $address_height;
   }
 
-  .invitation__title {
+  .invitation__address-slogan {
     margin-top: 65px;
-    margin-bottom: 60px;
-    padding-left: 40px;
+    margin-left: 41px;
 
     font-size: 20px;
     line-height: 25px;
   }
 
-  .invitation__address {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding-right: 40px;
+  .invitation__address p {
+    width: 170px;
+    margin-top: 20px;
+    margin-right: 42px;
 
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
   }
 
-  .invitation__address p {
-    line-height: 20px;
-    font-size: 16px;
-  }
-
   .invitation__address p:first-child {
-    margin-bottom: 20px;
+    margin-top: 64px;
   }
 
-  .invitation__pin {
-    min-height: 396px;
-    background-size: 124px 106px;
+
+  .invitation__map {
+    width: calc(100% + 60px);
+    min-height: $map_height;
+    margin-right: -30px;
+    margin-left: -30px;
   }
 }
 
+
 @media ($desktop) {
+  $map_height: 400px;
+
   .invitation {
-    min-height: 396px;
-    background-image: url("../img/bg-map-desktop@1x.png"), linear-gradient(#ffffff 0, #fef7f1 0);
-
-    @media ($retina) {
-      background-image: url("../img/bg-map-desktop@2x.png");
-    }
+    background-color: #fef7ef;
   }
 
-  .invitation__title {
-    flex-basis: 25%;
-    height: 200px;
-    padding-top: 63px;
-    padding-bottom: 0;
-    padding-left: 75px;
-    margin-top: 100px;
-    margin-bottom: auto;
+  .invitaion__address-wrapper {
+    order: 2;
+    box-sizing: border-box;
+    width: 569px;
+    min-height: calc(400px - 94px - 104px);
+    margin-top: 94px;
+    margin-bottom: 94px;
+    padding: 66px;
   }
 
-  .invitation__address {
-    flex-basis: 22%;
-    height: 200px;
-    padding-top: 63px;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 20px;
+  .invitation__address-slogan {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .invitation__address p {
+    width: 170px;
+    margin-top: 20px;
+    margin-right: 7px;
 
     text-align: left;
-    margin-top: 100px;
-    margin-bottom: auto;
   }
 
-  .invitation__pin {
-    flex-basis: 53%;
-    min-height: auto;
-    background-position: 60% 51%;
+  .invitation__address p:first-child {
+    margin-top: 0;
+  }
+
+  .invitation__map {
+    position: absolute;
+    left: 0;
+
+    order: 1;
+    width: 100%;
+    min-height: $map_height;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
